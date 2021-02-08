@@ -42,10 +42,7 @@ Besides these part there are:
 
 Nonlinear function works like see at picture below:
 
-
-
-![alt](<Docs/Images/Docs/Images/nonlinear.jpg>)
-
+![alt](<Docs/Images/nonlinear.jpg>)
 
 
 To build Guitar_amp use Projucer (from JUCE framework).
