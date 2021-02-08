@@ -3,7 +3,7 @@
 
     Engine.cpp
     Created: 7 Feb 2021 12:08:42pm
-    Author:  Dominik
+    Author:  Dominik Kuzniar / dkuzniar4
 
   ==============================================================================
 */

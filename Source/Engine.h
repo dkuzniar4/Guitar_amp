@@ -3,7 +3,7 @@
 
     Engine.h
     Created: 7 Feb 2021 12:08:55pm
-    Author:  Dominik
+    Author:  Dominik Kuzniar / dkuzniar4
 
   ==============================================================================
 */
