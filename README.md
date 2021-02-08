@@ -47,4 +47,4 @@ Nonlinear function works like see at picture below:
 
 To create project Guitar_amp use Projucer (from JUCE framework) and generate files to build.
 
-To download executable .exe or .vst3 plugin check out releases.
+To download executable .exe or .vst3 plugin check out releases on https://github.com/dkuzniar4/Guitar_amp/releases/
