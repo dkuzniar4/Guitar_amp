@@ -45,6 +45,6 @@ Nonlinear function works like see at picture below:
 ![alt](<Docs/Images/nonlinear.jpg>)
 
 
-To build Guitar_amp use Projucer (from JUCE framework).
+To create project Guitar_amp use Projucer (from JUCE framework) and generate files to build.
 
 To download executable .exe or .vst3 plugin check out releases.
