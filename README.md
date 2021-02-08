@@ -1,6 +1,6 @@
 # Guitar_amp
 
-![app](https://github.com/dkuzniar4/Guitar_amp/tree/main/Docs/Images/guitar_amp_image.png)
+![app](https://github.com/dkuzniar4/Guitar_amp/tree/main/Docs/Images/guitar_amp_image.jpg)
 
 This is a virtual guitar amplifier that was created using JUCE framework. 
 
@@ -44,7 +44,7 @@ Nonlinear function works like see at picture below:
 
 
 
-![app](https://github.com/dkuzniar4/Guitar_amp/tree/main/Docs/Images/nonlinear.png)
+![app](https://github.com/dkuzniar4/Guitar_amp/tree/main/Docs/Images/nonlinear.jpg)
 
 
 
