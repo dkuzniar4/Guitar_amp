@@ -103,11 +103,11 @@ void Guitar_ampAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
     treble_filter.setVolume(10.0);
 
     tube.init(_12AX7_transfer, 9);
-    tube.setBias(0.7);
+    tube.setBias(1.2);
     tube.setAmpli(0.1);
-    tube.recalc();
+    //tube.recalc();
 
-    masterVolume = 1.0;
+    masterVolume = 4.0;
 
     amp_state = 1;
     cab_state = 1;

@@ -57,9 +57,7 @@ Guitar_ampAudioProcessorEditor::Guitar_ampAudioProcessorEditor (Guitar_ampAudioP
     Treble_knob.addListener(this);
 
     addAndMakeVisible(Bias_knob);
-    //Bias_knob.setSliderStyle(juce::Slider::Rotary);
-    //Bias_knob.setRotaryParameters(3.92, 8.63, true);
-    Bias_knob.setRange(0.50, 2.0, 0.001);
+    Bias_knob.setRange(0.75, 1.75, 0.001);
     Bias_knob.setTextBoxStyle(juce::Slider::NoTextBox, false, 90, 0);
     Bias_knob.setPopupDisplayEnabled(true, false, this);
     Bias_knob.setTextValueSuffix(" Bias");
@@ -67,9 +65,7 @@ Guitar_ampAudioProcessorEditor::Guitar_ampAudioProcessorEditor (Guitar_ampAudioP
     Bias_knob.addListener(this);
 
     addAndMakeVisible(Amp_knob);
-    //Amp_knob.setSliderStyle(juce::Slider::Rotary);
-    //Amp_knob.setRotaryParameters(3.92, 8.63, true);
-    Amp_knob.setRange(0.001, 0.25, 0.001);
+    Amp_knob.setRange(0.001, 0.5, 0.001);
     Amp_knob.setTextBoxStyle(juce::Slider::NoTextBox, false, 90, 0);
     Amp_knob.setPopupDisplayEnabled(true, false, this);
     Amp_knob.setTextValueSuffix(" Amp");
@@ -79,7 +75,7 @@ Guitar_ampAudioProcessorEditor::Guitar_ampAudioProcessorEditor (Guitar_ampAudioP
     addAndMakeVisible(MasterVolume_knob);
     MasterVolume_knob.setSliderStyle(juce::Slider::Rotary);
     MasterVolume_knob.setRotaryParameters(3.92, 8.63, true);
-    MasterVolume_knob.setRange(0.00, 2.0, 0.01);
+    MasterVolume_knob.setRange(0.00, 10.0, 0.01);
     MasterVolume_knob.setTextBoxStyle(juce::Slider::NoTextBox, false, 90, 0);
     MasterVolume_knob.setPopupDisplayEnabled(true, false, this);
     MasterVolume_knob.setTextValueSuffix(" Master volume");

@@ -92,85 +92,39 @@ void Nonlinear::init(float(*characteristic)[2U], unsigned int set_size)
     size = set_size;
     Input_min = characteristic[0][0];
     Input_max = characteristic[size - 1][0];
-    step = characteristic[1][0] - characteristic[0][0];
+    step = -characteristic[1][0] - (-characteristic[0][0]);
 
+    // calculating gain tab
     for (unsigned int i = 0U; i < size; i++)
     {
-        gain_tab[i] = (characteristic[i][1] * 0.001f * 8) / characteristic[i][0];
+        gain_tab[i] = (characteristic[i][1]) / -characteristic[i][0];
+    }
+
+    // looking for the absolute maximum
+    float max = ABS(gain_tab[0]);
+    for (unsigned int i = 1; i < size; i++)
+    {
+        if (ABS(gain_tab[i]) > max)
+        {
+            max = ABS(gain_tab[i]);
+        }
+    }
+
+    // normalisation to 1
+    for (unsigned int i = 0; i < size; i++)
+    {
+        gain_tab[i] /= max;
     }
 }
 
 void Nonlinear::setBias(float value)
 {
-    if (value < Input_min)
-    {
-        BiasLimit_alert = 1;
-        bias = Input_min + 0.05f;
-    }
-    else if (value > Input_max)
-    {
-        BiasLimit_alert = 1;
-        bias = Input_max - 0.05f;
-    }
-    else
-    {
-        BiasLimit_alert = 0;
-        bias = value;
-    }
-
-    if ((bias - amp) < Input_min)
-    {
-        AmpliLimit_alert = 1;
-        amp = bias - Input_min;
-    }
-    else if ((bias + amp) > Input_max)
-    {
-        AmpliLimit_alert = 1;
-        amp = Input_max - bias;
-    }
+    bias = value;
 }
 
 void Nonlinear::setAmpli(float value)
 {
-    if (value > (bias - Input_min))
-    {
-        AmpliLimit_alert = 1;
-        amp = bias - Input_min;
-    }
-    else if (value > (Input_max - bias))
-    {
-        AmpliLimit_alert = 1;
-        amp = Input_max - bias;
-    }
-    else
-    {
-        AmpliLimit_alert = 0;
-        amp = value;
-    }
-}
-
-void Nonlinear::recalc(void)
-{
-    float f_low, f_high;
-    unsigned int i_low, i_high;
-
-    f_low = ((bias - amp) / step) - 1U;
-    i_low = floor(f_low);
-
-    f_high = ((bias + amp) / step) - 1U;
-    i_high = floor(f_high);
-
-    float max = gain_tab[i_low];
-
-    for (unsigned int i = (i_low + 1); i < i_high; i++)
-    {
-        if (gain_tab[i] > max)
-        {
-            max = gain_tab[i];
-        }
-    }
-
-    norm = 1.0f / max;
+    amp = value;
 }
 
 float Nonlinear::processing(float input)
@@ -183,8 +137,8 @@ float Nonlinear::processing(float input)
 
     in = input;
 
-    in *= this->amp;
-    in += this->bias;
+    in *= amp;
+    in += bias;
 
     address = (in / step) - 1U;
     index = floor(address);
@@ -192,19 +146,16 @@ float Nonlinear::processing(float input)
     if (index >= (size - 1U))
     {
         gain = gain_tab[size - 1U];
-        GainLimit_alert = 1;
     }
     else if (index < 0)
     {
         index = 0;
-        GainLimit_alert = 1;
     }
     else
     {
         gain = (prop * (gain_tab[index + 1U] - gain_tab[index])) + gain_tab[index];
-        GainLimit_alert = 0;
     }
-    return input * gain * norm;
+    return input * gain;
 }
 
 float Nonlinear::getBias(void)

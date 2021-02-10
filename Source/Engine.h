@@ -47,7 +47,7 @@ public:
     float processing(float input);
 
     void init(float(*characteristic)[2U], unsigned int set_size);
-    void recalc(void);
+    //void recalc(void);
     void setAmpli(float ampli);
     void setBias(float bias);
     float getBias(void);
@@ -63,8 +63,4 @@ public:
 
     float Input_min;
     float Input_max;
-
-    unsigned int GainLimit_alert;
-    unsigned int BiasLimit_alert;
-    unsigned int AmpliLimit_alert;
 };
