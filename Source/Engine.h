@@ -47,7 +47,6 @@ public:
     float processing(float input);
 
     void init(float(*characteristic)[2U], unsigned int set_size);
-    //void recalc(void);
     void setAmpli(float ampli);
     void setBias(float bias);
     float getBias(void);
