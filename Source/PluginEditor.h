@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "myLookAndFeel.h"
 
 //==============================================================================
 /**
@@ -48,6 +49,9 @@ private:
     juce::ImageButton Power_button;
     juce::ImageButton Filter_button;
     juce::ImageButton Tube_button;
+
+    // LookandFeels 
+    myLookAndFeel myKnobLook;
 
     virtual void buttonClicked(juce::Button* button) override;
     virtual void sliderValueChanged(juce::Slider* slider) override;

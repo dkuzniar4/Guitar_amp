@@ -2,8 +2,9 @@
 
 <JUCERPROJECT id="uc57pu" name="Guitar_amp" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              pluginManufacturer="dkuzniar4" pluginVST3Category="Distortion,Fx"
-              pluginChannelConfigs="{1,2}">
+              pluginManufacturer="dkuzniar" pluginVST3Category="Distortion,Fx"
+              pluginChannelConfigs="{1,1}" companyWebsite="www.dkuzniar.pl"
+              companyName="dkuzniar">
   <MAINGROUP id="K1IAvH" name="Guitar_amp">
     <GROUP id="{A9EED403-F830-B3F8-7693-05C6D286E5B4}" name="Graphics">
       <FILE id="qiMgot" name="background.png" compile="0" resource="1" file="Graphics/background.png"/>
@@ -11,10 +12,14 @@
       <FILE id="veI6Ef" name="switch_OFF.png" compile="0" resource="1" file="Graphics/switch_OFF.png"/>
       <FILE id="LxqOn8" name="cab_OFF.png" compile="0" resource="1" file="Graphics/cab_OFF.png"/>
       <FILE id="yttjdW" name="cab_ON.png" compile="0" resource="1" file="Graphics/cab_ON.png"/>
+      <FILE id="p9rOtV" name="knobRelease.png" compile="0" resource="1" file="Graphics/knobRelease.png"/>
       <FILE id="LJ2V4M" name="power_OFF.png" compile="0" resource="1" file="Graphics/power_OFF.png"/>
       <FILE id="aBQG90" name="power_ON.png" compile="0" resource="1" file="Graphics/power_ON.png"/>
     </GROUP>
     <GROUP id="{5DAEC68E-C409-5ED8-CC1F-1E74D30302DE}" name="Source">
+      <FILE id="eQk7KO" name="myLookAndFeel.h" compile="0" resource="0" file="Source/myLookAndFeel.h"/>
+      <FILE id="cU1Kk8" name="myLookAndFeel.cpp" compile="1" resource="0"
+            file="Source/myLookAndFeel.cpp"/>
       <FILE id="UrGnyt" name="kernels.h" compile="0" resource="0" file="Source/kernels.h"/>
       <FILE id="M6TpyM" name="Engine.h" compile="0" resource="0" file="Source/Engine.h"/>
       <FILE id="xtO5zj" name="Engine.cpp" compile="1" resource="0" file="Source/Engine.cpp"/>
