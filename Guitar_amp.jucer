@@ -8,7 +8,7 @@
   <MAINGROUP id="K1IAvH" name="Guitar_amp">
     <GROUP id="{A9EED403-F830-B3F8-7693-05C6D286E5B4}" name="Graphics">
       <FILE id="wKZ5dh" name="switch_ON.png" compile="0" resource="1" file="Graphics/switch_ON.png"/>
-      <FILE id="veI6Ef" name="switch_OFF.png" compile="0" resource="1" file="Graphics/switch_OFF.png"/>
+      <FILE id="QgEP3V" name="switch_OFF.png" compile="0" resource="1" file="Graphics/switch_OFF.png"/>
       <FILE id="LxqOn8" name="cab_OFF.png" compile="0" resource="1" file="Graphics/cab_OFF.png"/>
       <FILE id="I3zXmf" name="background.png" compile="0" resource="1" file="Graphics/background.png"/>
       <FILE id="yttjdW" name="cab_ON.png" compile="0" resource="1" file="Graphics/cab_ON.png"/>

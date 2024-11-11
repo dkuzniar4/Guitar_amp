@@ -9,28 +9,28 @@
 namespace BinaryData
 {
     extern const char*   switch_ON_png;
-    const int            switch_ON_pngSize = 729;
+    const int            switch_ON_pngSize = 402;
 
     extern const char*   switch_OFF_png;
-    const int            switch_OFF_pngSize = 766;
+    const int            switch_OFF_pngSize = 451;
 
     extern const char*   cab_OFF_png;
-    const int            cab_OFF_pngSize = 797;
+    const int            cab_OFF_pngSize = 494;
 
     extern const char*   background_png;
-    const int            background_pngSize = 60921;
+    const int            background_pngSize = 29146;
 
     extern const char*   cab_ON_png;
-    const int            cab_ON_pngSize = 790;
+    const int            cab_ON_pngSize = 472;
 
     extern const char*   knobRelease_png;
-    const int            knobRelease_pngSize = 18385;
+    const int            knobRelease_pngSize = 7654;
 
     extern const char*   power_OFF_png;
-    const int            power_OFF_pngSize = 714;
+    const int            power_OFF_pngSize = 351;
 
     extern const char*   power_ON_png;
-    const int            power_ON_pngSize = 676;
+    const int            power_ON_pngSize = 324;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 8;

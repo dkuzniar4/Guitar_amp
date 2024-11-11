@@ -113,7 +113,7 @@ Guitar_ampAudioProcessorEditor::Guitar_ampAudioProcessorEditor (Guitar_ampAudioP
     addAndMakeVisible(Tube_button);
     Tube_button.addListener(this);
 
-    setSize(1400, 500);
+    setSize(700, 250);
 }
 
 Guitar_ampAudioProcessorEditor::~Guitar_ampAudioProcessorEditor()
@@ -197,22 +197,22 @@ void Guitar_ampAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
-    InputVolume_knob.setBounds(133, 260, 85, 85);
+    InputVolume_knob.setBounds(60, 129, 50, 50);
 
-    Bass_knob.setBounds(351, 260, 85, 85);
-    Mid_knob.setBounds(460, 260, 85, 85);
-    Treble_knob.setBounds(566, 260, 85, 85);
+    Bass_knob.setBounds(171, 152, 50, 50);
+    Mid_knob.setBounds(225, 152, 50, 50);
+    Treble_knob.setBounds(278, 152, 50, 50);
     
-    Bias_knob.setBounds(794, 367, 130, 30);
-    Amp_knob.setBounds(794, 394, 130, 30);
+    Bias_knob.setBounds(400, 185, 60, 12);
+    Amp_knob.setBounds(400, 198, 60, 12);
 
-    Power_button.setBounds(1298, 19, 48, 94);
-    Cab_button.setBounds(1084, 39, 57, 47);
+    Power_button.setBounds(649, 9, 18, 42);
+    Cab_button.setBounds(542, 20, 30, 25);
 
-    Filter_button.setBounds(607, 197, 37, 37);
-    Tube_button.setBounds(981, 197, 37, 37);
+    Filter_button.setBounds(303, 98, 18, 18);
+    Tube_button.setBounds(489, 98, 37, 37);
     
-    MasterVolume_knob.setBounds(1170, 260, 85, 85);
+    MasterVolume_knob.setBounds(583, 129, 50, 50);
 }
 
 void Guitar_ampAudioProcessorEditor::buttonClicked(juce::Button* button)
