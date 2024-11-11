@@ -4235,10 +4235,10 @@
     <ClInclude Include="..\..\JuceLibraryCode\JucePluginDefines.h"/>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Graphics\background.png"/>
     <None Include="..\..\Graphics\switch_ON.png"/>
     <None Include="..\..\Graphics\switch_OFF.png"/>
     <None Include="..\..\Graphics\cab_OFF.png"/>
+    <None Include="..\..\Graphics\background.png"/>
     <None Include="..\..\Graphics\cab_ON.png"/>
     <None Include="..\..\Graphics\knobRelease.png"/>
     <None Include="..\..\Graphics\power_OFF.png"/>

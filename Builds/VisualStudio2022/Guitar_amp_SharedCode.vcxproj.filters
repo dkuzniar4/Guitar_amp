@@ -7718,9 +7718,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\Graphics\background.png">
-      <Filter>Guitar_amp\Graphics</Filter>
-    </None>
     <None Include="..\..\Graphics\switch_ON.png">
       <Filter>Guitar_amp\Graphics</Filter>
     </None>
@@ -7728,6 +7725,9 @@
       <Filter>Guitar_amp\Graphics</Filter>
     </None>
     <None Include="..\..\Graphics\cab_OFF.png">
+      <Filter>Guitar_amp\Graphics</Filter>
+    </None>
+    <None Include="..\..\Graphics\background.png">
       <Filter>Guitar_amp\Graphics</Filter>
     </None>
     <None Include="..\..\Graphics\cab_ON.png">
