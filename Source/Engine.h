@@ -46,7 +46,7 @@ private:
 class FIR
 {
 public:
-    FIR::FIR();
+    FIR();
     float processing(float input, float* IR, unsigned int IR_len);
 
 private:
