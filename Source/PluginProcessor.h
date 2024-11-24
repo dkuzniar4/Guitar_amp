@@ -55,6 +55,23 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
 
     Amp ampSim;
+
+    juce::AudioProcessorValueTreeState parameters;
+    juce::Value Input;
+    juce::Value Master;
+
+    juce::Value Bass;
+    juce::Value Mid;
+    juce::Value Treble;
+
+    juce::Value Bias;
+    juce::Value Ampli;
+
+    juce::Value AmpState;
+    juce::Value CabState;
+    juce::Value FilterState;
+    juce::Value TubeState;
+
 private:
 
     //==============================================================================

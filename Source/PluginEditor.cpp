@@ -239,30 +239,37 @@ void Guitar_ampAudioProcessorEditor::sliderValueChanged(juce::Slider* slider)
     if (slider == &InputVolume_knob)
     {
         audioProcessor.ampSim.setInputVolume(slider->getValue());
+        audioProcessor.Input.setValue(slider->getValue());
     }
     else if (slider == &Bass_knob)
     {
         audioProcessor.ampSim.setBassVolume(slider->getValue());
+        audioProcessor.Bass.setValue(slider->getValue());
     }
     else if (slider == &Mid_knob)
     {
         audioProcessor.ampSim.setMidVolume(slider->getValue());
+        audioProcessor.Mid.setValue(slider->getValue());
     }
     else if (slider == &Treble_knob)
     {
         audioProcessor.ampSim.setTrebleVolume(slider->getValue());
+        audioProcessor.Treble.setValue(slider->getValue());
     }
     else if (slider == &Bias_knob)
     {
         audioProcessor.ampSim.setBias(slider->getValue());
+        audioProcessor.Bias.setValue(slider->getValue());
     }
     else if (slider == &Amp_knob)
     {
         audioProcessor.ampSim.setAmp(slider->getValue());
+        audioProcessor.Ampli.setValue(slider->getValue());
     }
     else if (slider == &MasterVolume_knob)
     {
         audioProcessor.ampSim.setMasterVolume(slider->getValue());
+        audioProcessor.Master.setValue(slider->getValue());
     }
 }
 
@@ -271,10 +278,12 @@ void Guitar_ampAudioProcessorEditor::Cab_buttonClicked()
     if (audioProcessor.ampSim.getCabState() == 0)
     {
         audioProcessor.ampSim.setCabState(1);
+        audioProcessor.CabState.setValue(1);
     }
     else
     {
         audioProcessor.ampSim.setCabState(0);
+        audioProcessor.CabState.setValue(0);
     }
     repaint();
 }
@@ -284,10 +293,12 @@ void Guitar_ampAudioProcessorEditor::Power_buttonClicked()
     if (audioProcessor.ampSim.getAmpState() == 0)
     {
         audioProcessor.ampSim.setAmpState(1);
+        audioProcessor.AmpState.setValue(1);
     }
     else
     {
         audioProcessor.ampSim.setAmpState(0);
+        audioProcessor.AmpState.setValue(0);
     }
     repaint();
 }
@@ -297,10 +308,12 @@ void Guitar_ampAudioProcessorEditor::Filter_buttonCLicked()
     if (audioProcessor.ampSim.getFilterState() == 0)
     {
         audioProcessor.ampSim.setFilterState(1);
+        audioProcessor.FilterState.setValue(1);
     }
     else
     {
         audioProcessor.ampSim.setFilterState(0);
+        audioProcessor.FilterState.setValue(0);
     }
     repaint();
 }
@@ -310,10 +323,12 @@ void Guitar_ampAudioProcessorEditor::Tube_buttonCLicked()
     if (audioProcessor.ampSim.getTubeState() == 0)
     {
         audioProcessor.ampSim.setTubeState(1);
+        audioProcessor.TubeState.setValue(1);
     }
     else
     {
         audioProcessor.ampSim.setTubeState(0);
+        audioProcessor.TubeState.setValue(0);
     }
     repaint();
 }
